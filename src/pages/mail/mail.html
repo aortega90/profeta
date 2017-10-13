@@ -1,0 +1,43 @@
+<ion-content padding>
+ <!--ion-list>
+ <ion-item>
+ <ion-label floating>Username</ion-label>
+ <ion-input type="text" name="username" [(ngModel)]="data.username"></ion-input>
+ <input type="email" name="email" clearInput="true"   [(ngModel)]="data.username" pattern="[A-Za-z0-9._%+-]{3,}@[a-zA-Z]{3,}([.]{1}[a-zA-Z]{2,}|[.]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,})" required="">
+
+
+ </ion-item>
+ 
+ <button ion-button block (click)="submit()" type="submit" >Submit to server</button>
+ </ion-list-->
+
+<!-- Probando este es el que es -->
+ <!--form #f="ngForm" (ngSubmit)="submit()">
+  <ion-item margin-vertical >
+    <ion-label> <ion-icon name="mail"></ion-icon></ion-label>
+    <ion-input  type="email" name="username" placeholder="Coloca tu correo para ver 3 predicciones." [(ngModel)]="data.username" ngModel email></ion-input>
+  </ion-item>
+  <button ion-button block large [disabled]="!f.valid" type="submit" on-touch = "submit()" class="button-mail">Submit</button> 
+</form-->
+<div class="center-item">
+	<h1>Coloca tu correo para ver 3 predicciones.</h1>
+	<form #f="ngForm" (ngSubmit)="submit()">
+		<ion-item margin-vertical>
+			<ion-label> <ion-icon name="mail" class="color-email"></ion-icon></ion-label>
+			<ion-input  type="email" class="text-mail" name="username" placeholder="" [(ngModel)]="data.username" ngModel email></ion-input>
+		</ion-item>
+	<button ion-button block large [disabled]="!f.valid" type="submit" on-touch = "submit()" class="button-mail">Ver el futuro</button> 
+	</form>
+</div> 
+
+
+ <!--ion-card>
+ <ion-card-header>
+ Response
+ </ion-card-header>
+ 
+ <ion-card-content>
+ <b>{{data.response}}</b>
+ </ion-card-content>
+ </ion-card-->
+</ion-content>
